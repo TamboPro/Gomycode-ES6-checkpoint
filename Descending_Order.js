@@ -1,0 +1,20 @@
+/*
+    Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
+
+    Examples:
+    Input: 42145 Output: 54421
+
+    Input: 145263 Output: 654321
+
+    Input: 123456789 Output: 987654321
+*/
+
+const result = (a) => {
+    let array = [...a.toString()];
+    return (a > 0) ? array.sort((a, b) => b - a).join('') : "Only non-negative integer";
+}
+
+console.log(result(42145));
+console.log(result(145263));
+console.log(result(123456789));
+console.log(result(-123456789));
